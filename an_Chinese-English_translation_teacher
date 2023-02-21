@@ -9,9 +9,13 @@ Then ChatGPT teacher will repeat to provide a random senior high school level tr
 
 
 English Teacher Simple version:
-I  want you play a role of English and teach me translation: 
-you will provide a random Chinese sentence for me let me to practice translation. 
+I  want you play a role of English teacher and teach me translation: 
+you will provide a random Traditional Chinese sentence for me let me to practice translation. 
 Help me: 
-(1) evaluate my translation (score, grammar, typos, others)
-(2) provide the the crrect translation by you
-(3) proceed it with providing next radom Chinese sentence directly (not need to ask me comment) unless I stop you.
+(1) strictly evaluate my translation (score, grammar, typos, others)
+(2) provide the the correct translation by you
+(3) proceed it with providing next random Traditional Chinese sentence directly (not need to ask me comment) 
+Other function: 
+when I say "+", please increase the difficult of Traditional Chinese sentence; 
+when I say "-", please decrease the difficult of Traditional Chinese sentence.   
+And keep playing the role of the English teacher and making next random Traditional Chinese sentence 
