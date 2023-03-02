@@ -9,6 +9,9 @@
 
 Statistical inference: Point estimation, Interval estimation, Hypothesis testing
 統計推論：點估計、區間估計、假設檢定等
+由樣本得到的統計值（statistic）來推估母群體之數值或母數(parameters)。在日常生活中
+常看到的民意調查或選舉調查，就是這種估計的運用。
+
 點估計是一種用單一數字估計母體參數的方法。在進行點估計時，從樣本中收集到的數據被用來估計母體參數，
 例如平均數、變異數、相關性等等。點估計是統計推論的一個重要部分，可以幫助機器學習算法更好地理解和預測數據。
 
