@@ -7,6 +7,61 @@
 常見的統計分布：常態分布、t分布、卡方分布、F分布等
 常態分布（Normal distribution）是一種在統計學中常見的機率分布，也被稱為高斯分布（Gaussian distribution）。
 
+Standard deviation is a measure of the amount of variation or dispersion of a set of data values 
+from the mean. 
+It tells us how much the data values deviate from the mean value. 
+The larger the standard deviation, the more spread out the data is. 
+It is represented by the symbol σ (sigma) for a population and s for a sample.
+
+The formula to calculate the standard deviation of a sample is:
+
+s = √(Σ(x - x̄)² / (n - 1))
+
+Where s is the sample standard deviation, 
+Σ is the sum, 
+x is the data value, 
+x̄ is the sample mean, 
+and n is the sample size.
+
+For example, suppose we have the following set of data: 2, 5, 7, 8, 10. 
+To calculate the standard deviation, we first find the sample mean:
+x̄ = (2 + 5 + 7 + 8 + 10) / 5 = 6.4
+
+Next, we find the deviation of each data point from the mean:
+(2 - 6.4) = -4.4
+(5 - 6.4) = -1.4
+(7 - 6.4) = 0.6
+(8 - 6.4) = 1.6
+(10 - 6.4) = 3.6
+
+Then, we square each deviation:
+(-4.4)² = 19.36
+(-1.4)² = 1.96
+0.6² = 0.36
+1.6² = 2.56
+3.6² = 12.96
+
+We add up the squared deviations:
+19.36 + 1.96 + 0.36 + 2.56 + 12.96 = 37.2
+
+Finally, we divide the sum of squared deviations by the sample size minus one, and take the square root:
+
+s = √(37.2 / (5 - 1)) = √(37.2 / 4) = √9.3 = 3.05
+
+Therefore, the standard deviation of the sample is 3.05.
+Note that the formula for population standard deviation is similar, 
+except that it uses the population mean instead of the sample mean and 
+divides by the population size instead of the sample size.
+
+QA: 為什麼是n-1
+這是因為在樣本統計中，使用樣本標準差來估計母體標準差時，如果使用n而不是n-1，會導致對母體標準差進行高估，
+即估計值偏小，這種偏誤被稱為“樣本標準差的偏低性”。而使用n-1可以解決這種偏低性，因為它通常能夠更好地估計母體的變異性，
+從而提供更準確的估計值。
+
+因此，在樣本統計中，使用樣本標準差時，我們將分母改為n-1，以糾正偏誤，這稱為Bessel's correction（貝塞爾修正）。
+簡而言之，標準差的定義中使用n作為分母是針對母體標準差，而在樣本統計中使用n-1是針對樣本標準差，以糾正樣本標準差偏低的問題。
+
+
 Statistical inference: Point estimation, Interval estimation, Hypothesis testing
 統計推論：點估計、區間估計、假設檢定等
 由樣本得到的統計值（statistic）來推估母群體之數值或母數(parameters)。在日常生活中
@@ -32,6 +87,115 @@ Interval estimation
 區間估計涉及信賴區間（confidence intervals）的估計步驟。
 信賴區間是估計在一個範圍內的數值，而非單一數值。如果您報告說大約
 有「39%到 45%的選民」會投給某人，就是一種區間估計之例子。
+
+Example 1: 
+A company wants to estimate the average salary of its employees. 
+They take a random sample of 100 employees and find that the sample mean 
+salary is $50,000, with a standard deviation of $5,000. 
+Based on this sample, the company constructs a 95% confidence interval 
+for the population mean salary. 
+The interval estimation gives a range of values from $47,822 to $52,178. 
+This means that the company is 95% confident that the population mean salary falls within this range.
+($47,832, $52,178)區間怎麼算:
+
+CI = x̄ ± z* (s/√n)
+
+where:
+
+x̄ is the sample mean = $50,000
+s is the sample standard deviation = $5,000
+n is the sample size = 100 
+z* is the critical value for the desired level of confidence (95% in this case)
+The critical value z* can be obtained from a standard normal distribution table or 
+a statistical software package, and for a 95% confidence interval, it is approximately 1.96.
+
+Substituting the values into the formula, we get:
+
+CI = $50,000 ± 1.96 * ($5,000/√100) = $50,000 ± $980
+
+Therefore, the 95% confidence interval for the population mean salary is from 
+$50,000 - $980 = $47,820 to $50,000 + $980 = $52,180, which rounds to $47,822 and $52,178.
+
+bias and efficiency are two important properties related to estimation.
+
+Bias refers to the tendency of an estimator to consistently over- or under-estimate 
+the true value of the population parameter it is trying to estimate. 
+A biased estimator may be systematically skewed to one side of the true value. 
+On the other hand, an unbiased estimator has no systematic tendency to 
+over- or under-estimate the true value, and is centered around the true value on average.
+
+Efficiency refers to how precise an estimator is. 
+An efficient estimator is one that has a smaller variance than other unbiased estimators. 
+In other words, an efficient estimator gives you more precise results with the same amount 
+of data compared to other estimators.
+
+Here are two examples:
+
+Imagine you want to estimate the average height of adult males in a certain population. 
+You take a random sample of 100 men and calculate their average height. 
+However, you only select men from a certain region of the population, 
+which tends to be taller than average. 
+Your estimator would be biased, as it is overestimating the average height of all adult 
+males in the population.
+
+Imagine you have two estimators that both estimate the same parameter, 
+but one of them has a smaller variance than the other. 
+The estimator with the smaller variance is more efficient, as it provides a more precise 
+estimate of the population parameter for the same sample size.
+
+Hypothesis testing is a statistical technique used in machine learning to test a hypothesis 
+about a population parameter based on sample data. 
+It involves formulating a null hypothesis and an alternative hypothesis, 
+and then using sample data to determine whether there is sufficient evidence to 
+reject the null hypothesis and accept the alternative hypothesis.
+
+The null hypothesis (H0) is the statement being tested, which is assumed to be true 
+until proven otherwise. 
+The alternative hypothesis (Ha) is the statement that is accepted if the null hypothesis is rejected. 
+
+The process of hypothesis testing involves calculating a test statistic, 
+which measures the difference between the sample data and the null hypothesis.
+
+The significance level (α) is the probability of rejecting the null hypothesis when 
+it is actually true, and is typically set at 0.05. 
+If the calculated p-value (the probability of observing a test statistic as extreme or 
+more extreme than the one calculated, assuming the null hypothesis is true) is less than 
+the significance level, the null hypothesis is rejected, and the alternative hypothesis is accepted.
+
+For example, let's say a company claims that their new machine learning algorithm can 
+correctly classify 90% of images, but you are skeptical of this claim. 
+You take a sample of 100 images and find that the algorithm correctly classifies 85 of them. 
+You want to test whether the company's claim is true.
+
+Formulate the null and alternative hypotheses:
+O Null hypothesis (H0): The algorithm can correctly classify 90% of images.
+O Alternative hypothesis (Ha): The algorithm cannot correctly classify 90% of images.
+Determine the significance level (alpha) - Let's assume it to be 0.05.
+
+Calculate the test statistic:
+To test the null hypothesis, you can use a z-test for the proportion. The test statistic can be calculated as:
+z = (p̂ - p) / √(p*(1-p)/n)
+
+where
+p̂ is the sample proportion (0.85)
+p is the hypothesized proportion (0.9)
+n is the sample size (100)
+
+Substituting the values, we get:
+z = (0.85 - 0.9) / √(0.9 * 0.1 / 100) = -1.67
+
+Determine the p-value:
+
+The p-value is the probability of obtaining a test statistic as extreme or more extreme 
+than the one observed, assuming the null hypothesis is true. In this case, we are performing 
+a one-tailed test (since the alternative hypothesis is one-sided), so we look up the 
+p-value corresponding to a z-score of -1.67 in the z-table. The p-value turns out to be 0.0475.
+
+Compare the p-value with the significance level:
+Since the p-value (0.0475) is less than the significance level (0.05), 
+we reject the null hypothesis and conclude that the algorithm cannot correctly classify 90% of images.
+
+Therefore, based on the sample of 100 images, there is evidence to suggest that the company's claim is not true.
 
 
 簡單線性迴歸：迴歸分析的基本概念、最小二乘法、評估迴歸模型等
