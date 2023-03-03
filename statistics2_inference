@@ -198,13 +198,13 @@ we reject the null hypothesis and conclude that the algorithm cannot correctly c
 Therefore, based on the sample of 100 images, there is evidence to suggest that the company's claim is not true.
 
 
+第 4 章 機器學習常用的統計學(二)
+
 簡單線性迴歸：迴歸分析的基本概念、最小二乘法、評估迴歸模型等
 多元線性迴歸：多元迴歸模型、變數選擇、多重共線性等
 方差分析：單因素方差分析、多因素方差分析、變異數分析等
 相關分析：皮爾遜相關分析、斯皮爾曼相關分析、克拉默相關分析等
 非參數統計方法：核密度估計、K最近鄰法、決策樹等
-
-第 4 章 機器學習常用的統計學(二)
 
 第 5 章 機器學習常用的資料處理方式
 
